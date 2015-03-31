@@ -38,8 +38,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.gameSelect = new System.Windows.Forms.ComboBox();
+            this.tournamentFormat = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -131,38 +131,38 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox1
+            // gameSelect
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.gameSelect.FormattingEnabled = true;
+            this.gameSelect.Items.AddRange(new object[] {
             "CS:GO",
             "DOTA II",
             "FIFA",
             "StarCraft II"});
-            this.comboBox1.Location = new System.Drawing.Point(23, 157);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(195, 21);
-            this.comboBox1.TabIndex = 12;
+            this.gameSelect.Location = new System.Drawing.Point(23, 157);
+            this.gameSelect.Name = "gameSelect";
+            this.gameSelect.Size = new System.Drawing.Size(195, 21);
+            this.gameSelect.TabIndex = 12;
             // 
-            // comboBox2
+            // tournamentFormat
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.tournamentFormat.FormattingEnabled = true;
+            this.tournamentFormat.Items.AddRange(new object[] {
             "Single Elimination",
             "Double Elimination",
             "Round Robin"});
-            this.comboBox2.Location = new System.Drawing.Point(23, 213);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(195, 21);
-            this.comboBox2.TabIndex = 13;
+            this.tournamentFormat.Location = new System.Drawing.Point(23, 213);
+            this.tournamentFormat.Name = "tournamentFormat";
+            this.tournamentFormat.Size = new System.Drawing.Size(195, 21);
+            this.tournamentFormat.TabIndex = 13;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 307);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(396, 296);
+            this.Controls.Add(this.tournamentFormat);
+            this.Controls.Add(this.gameSelect);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -192,8 +192,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox gameSelect;
+        private System.Windows.Forms.ComboBox tournamentFormat;
 
     }
 }

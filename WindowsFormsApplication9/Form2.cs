@@ -12,9 +12,12 @@ namespace WindowsFormsApplication9
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public Form2(string tourNameLabel, object tourTypeLabel, object gameType)
         {
             InitializeComponent();
+            tournamentNameHere.Text = tourNameLabel;
+            tournamentTypeHere.Text = Convert.ToString(tourTypeLabel);
+            gameHere.Text = Convert.ToString(gameType);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
