@@ -10,3 +10,12 @@ c:\users\guttatus\documents\visual studio 2013\Projects\WindowsFormsApplication9
 D:\Githubby\P2\WindowsFormsApplication9\bin\Debug\WindowsFormsApplication9.exe.config
 D:\Githubby\P2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.exe
 D:\Githubby\P2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.pdb
+C:\Users\AAU\Documents\GitHub\p2\WindowsFormsApplication9\bin\Debug\WindowsFormsApplication9.exe.config
+C:\Users\AAU\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.exe
+C:\Users\AAU\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.pdb
+C:\Users\AAU\Documents\GitHub\p2\WindowsFormsApplication9\bin\Debug\WindowsFormsApplication9.exe
+C:\Users\AAU\Documents\GitHub\p2\WindowsFormsApplication9\bin\Debug\WindowsFormsApplication9.pdb
+C:\Users\AAU\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.csprojResolveAssemblyReference.cache
+C:\Users\AAU\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.Form1.resources
+C:\Users\AAU\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.Properties.Resources.resources
+C:\Users\AAU\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.csproj.GenerateResource.Cache
