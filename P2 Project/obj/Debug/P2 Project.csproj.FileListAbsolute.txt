@@ -1,2 +1,9 @@
 D:\Githubby\P2 Project\P2 Project\bin\Debug\P2 Project.exe.config
 D:\Githubby\p2\P2 Project\bin\Debug\P2 Project.exe.config
+D:\Githubby\p2\P2 Project\bin\Debug\P2 Project.exe
+D:\Githubby\p2\P2 Project\bin\Debug\P2 Project.pdb
+D:\Githubby\p2\P2 Project\obj\Debug\P2 Project.csprojResolveAssemblyReference.cache
+D:\Githubby\p2\P2 Project\obj\Debug\P2_Project.Properties.Resources.resources
+D:\Githubby\p2\P2 Project\obj\Debug\P2 Project.csproj.GenerateResource.Cache
+D:\Githubby\p2\P2 Project\obj\Debug\P2 Project.exe
+D:\Githubby\p2\P2 Project\obj\Debug\P2 Project.pdb
