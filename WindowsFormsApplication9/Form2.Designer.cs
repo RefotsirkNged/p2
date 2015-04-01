@@ -32,12 +32,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.applyTeamData = new System.Windows.Forms.Button();
             this.teamGridView = new System.Windows.Forms.DataGridView();
-            this.numberOfTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teamName = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.teamSeeding = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox_teamName = new System.Windows.Forms.TextBox();
             this.textBox_teamSeeding = new System.Windows.Forms.TextBox();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.generate_tournament = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +42,9 @@
             this.tournamentTypeHere = new System.Windows.Forms.Label();
             this.LabelX = new System.Windows.Forms.Label();
             this.gameHere = new System.Windows.Forms.Label();
+            this.numberOfTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teamName = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.teamSeeding = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.teamGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,30 +85,12 @@
             this.numberOfTeam,
             this.teamName,
             this.teamSeeding});
-            this.teamGridView.Location = new System.Drawing.Point(12, 120);
+            this.teamGridView.Location = new System.Drawing.Point(12, 130);
             this.teamGridView.Name = "teamGridView";
             this.teamGridView.ReadOnly = true;
-            this.teamGridView.Size = new System.Drawing.Size(604, 267);
+            this.teamGridView.Size = new System.Drawing.Size(615, 267);
             this.teamGridView.TabIndex = 3;
             this.teamGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // numberOfTeam
-            // 
-            this.numberOfTeam.HeaderText = "#";
-            this.numberOfTeam.Name = "numberOfTeam";
-            this.numberOfTeam.Width = 45;
-            // 
-            // teamName
-            // 
-            this.teamName.HeaderText = "Team name";
-            this.teamName.Name = "teamName";
-            this.teamName.Width = 375;
-            // 
-            // teamSeeding
-            // 
-            this.teamSeeding.HeaderText = "Team Seeding";
-            this.teamSeeding.Name = "teamSeeding";
-            this.teamSeeding.Width = 120;
             // 
             // textBox_teamName
             // 
@@ -125,13 +106,6 @@
             this.textBox_teamSeeding.Size = new System.Drawing.Size(122, 20);
             this.textBox_teamSeeding.TabIndex = 5;
             // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(596, 120);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(20, 267);
-            this.vScrollBar1.TabIndex = 6;
-            // 
             // generate_tournament
             // 
             this.generate_tournament.Location = new System.Drawing.Point(552, 417);
@@ -140,6 +114,7 @@
             this.generate_tournament.TabIndex = 7;
             this.generate_tournament.Text = "Generate";
             this.generate_tournament.UseVisualStyleBackColor = true;
+            this.generate_tournament.Click += new System.EventHandler(this.generate_tournament_Click);
             // 
             // back
             // 
@@ -149,6 +124,7 @@
             this.back.TabIndex = 8;
             this.back.Text = " Back";
             this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click_2);
             // 
             // label3
             // 
@@ -163,9 +139,11 @@
             // tournamentNameHere
             // 
             this.tournamentNameHere.AutoSize = true;
+            this.tournamentNameHere.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tournamentNameHere.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.tournamentNameHere.Location = new System.Drawing.Point(79, 18);
             this.tournamentNameHere.Name = "tournamentNameHere";
-            this.tournamentNameHere.Size = new System.Drawing.Size(111, 13);
+            this.tournamentNameHere.Size = new System.Drawing.Size(129, 13);
             this.tournamentNameHere.TabIndex = 10;
             this.tournamentNameHere.Text = "tournamentNameHere";
             // 
@@ -182,9 +160,11 @@
             // tournamentTypeHere
             // 
             this.tournamentTypeHere.AutoSize = true;
+            this.tournamentTypeHere.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tournamentTypeHere.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.tournamentTypeHere.Location = new System.Drawing.Point(344, 18);
             this.tournamentTypeHere.Name = "tournamentTypeHere";
-            this.tournamentTypeHere.Size = new System.Drawing.Size(107, 13);
+            this.tournamentTypeHere.Size = new System.Drawing.Size(125, 13);
             this.tournamentTypeHere.TabIndex = 12;
             this.tournamentTypeHere.Text = "tournamentTypeHere";
             // 
@@ -200,11 +180,34 @@
             // gameHere
             // 
             this.gameHere.AutoSize = true;
+            this.gameHere.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameHere.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.gameHere.Location = new System.Drawing.Point(498, 18);
             this.gameHere.Name = "gameHere";
-            this.gameHere.Size = new System.Drawing.Size(56, 13);
+            this.gameHere.Size = new System.Drawing.Size(64, 13);
             this.gameHere.TabIndex = 14;
             this.gameHere.Text = "gameHere";
+            // 
+            // numberOfTeam
+            // 
+            this.numberOfTeam.HeaderText = "#";
+            this.numberOfTeam.Name = "numberOfTeam";
+            this.numberOfTeam.ReadOnly = true;
+            this.numberOfTeam.Width = 45;
+            // 
+            // teamName
+            // 
+            this.teamName.HeaderText = "Team name";
+            this.teamName.Name = "teamName";
+            this.teamName.ReadOnly = true;
+            this.teamName.Width = 407;
+            // 
+            // teamSeeding
+            // 
+            this.teamSeeding.HeaderText = "Team Seeding";
+            this.teamSeeding.Name = "teamSeeding";
+            this.teamSeeding.ReadOnly = true;
+            this.teamSeeding.Width = 120;
             // 
             // Form2
             // 
@@ -219,7 +222,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.back);
             this.Controls.Add(this.generate_tournament);
-            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.textBox_teamSeeding);
             this.Controls.Add(this.textBox_teamName);
             this.Controls.Add(this.teamGridView);
@@ -243,17 +245,16 @@
         private System.Windows.Forms.DataGridView teamGridView;
         private System.Windows.Forms.TextBox textBox_teamName;
         private System.Windows.Forms.TextBox textBox_teamSeeding;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Button generate_tournament;
         private System.Windows.Forms.Button back;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfTeam;
-        private System.Windows.Forms.DataGridViewLinkColumn teamName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teamSeeding;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label tournamentNameHere;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label tournamentTypeHere;
         private System.Windows.Forms.Label LabelX;
         private System.Windows.Forms.Label gameHere;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfTeam;
+        private System.Windows.Forms.DataGridViewLinkColumn teamName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teamSeeding;
     }
 }

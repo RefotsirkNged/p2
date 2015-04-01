@@ -43,5 +43,10 @@ namespace WindowsFormsApplication9
             f2.Show();
             this.Hide(); 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

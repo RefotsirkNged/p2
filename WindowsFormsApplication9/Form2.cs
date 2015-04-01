@@ -22,12 +22,13 @@ namespace WindowsFormsApplication9
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
+        //is this variable ok here, it seems so alone?
         int howManyTeams = 1;
         private void applyTeamData_Click(object sender, EventArgs e)
         {
-            
+            //This should be stored in List instead, not as it is now. Its prolly better that way.
             string numberOfTeam = Convert.ToString(howManyTeams);
             string teamName = textBox_teamName.Text;
             string teamSeeding = textBox_teamSeeding.Text;
@@ -48,8 +49,8 @@ namespace WindowsFormsApplication9
         private void back_Click(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
-            this.Hide();
             f1.Show();
+            this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -65,6 +66,21 @@ namespace WindowsFormsApplication9
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void generate_tournament_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3(this.tournamentNameHere.Text);
+            f3.Show();
+            this.Hide(); 
+        }
+
+
+        private void back_Click_2(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
         }
     }
 }
