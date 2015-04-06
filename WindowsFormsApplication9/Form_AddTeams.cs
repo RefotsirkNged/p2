@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication9
 {
-    public partial class Form2 : Form
+    public partial class Form_AddTeams : Form
     {
-        public Form2(string tourNameLabel, object tourTypeLabel, object gameType)
+        public Form_AddTeams(string tourNameLabel, object tourTypeLabel, object gameType)
         {
             InitializeComponent();
             tournamentNameHere.Text = tourNameLabel;
@@ -46,12 +46,7 @@ namespace WindowsFormsApplication9
 
         }
 
-        private void back_Click(object sender, EventArgs e)
-        {
-            Form1 f1 = new Form1();
-            f1.Show();
-            this.Hide();
-        }
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -70,7 +65,7 @@ namespace WindowsFormsApplication9
 
         private void generate_tournament_Click(object sender, EventArgs e)
         {
-            Form3 f3 = new Form3(this.tournamentNameHere.Text);
+            Form_RunTournament f3 = new Form_RunTournament(this.tournamentNameHere.Text);
             f3.Show();
             this.Hide(); 
         }
@@ -78,7 +73,7 @@ namespace WindowsFormsApplication9
 
         private void back_Click_2(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
+            Form_TournamentNameType f1 = new Form_TournamentNameType();
             f1.Show();
             this.Hide();
         }

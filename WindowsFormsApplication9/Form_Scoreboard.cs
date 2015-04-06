@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication9
 {
-    public partial class Form4 : Form
+    public partial class Form_Scoreboard : Form
     {
-        public Form4(string tourName)
+        public Form_Scoreboard(string tourName)
         {
             InitializeComponent();
             tour_ScoreBoard.Text = tourName;

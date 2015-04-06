@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication9
 {
-    public partial class Form1 : Form
+    public partial class Form_TournamentNameType : Form
     {
-        public Form1()
+        public Form_TournamentNameType()
         {
             InitializeComponent();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,7 +40,7 @@ namespace WindowsFormsApplication9
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2(this.textBox1.Text, this.tournamentFormat.SelectedItem , this.gameSelect.SelectedItem);
+            Form_AddTeams f2 = new Form_AddTeams(this.textBox1.Text, this.tournamentFormat.SelectedItem , this.gameSelect.SelectedItem);
             f2.Show();
             this.Hide(); 
         }

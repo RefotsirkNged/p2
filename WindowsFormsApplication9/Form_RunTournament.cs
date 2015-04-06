@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication9
 {
-    public partial class Form3 : Form
+    public partial class Form_RunTournament : Form
     {
-        public Form3(string tourName)
+        public Form_RunTournament(string tourName)
         {
             InitializeComponent();
             tournamentBox.Text = tourName;
@@ -70,7 +70,7 @@ namespace WindowsFormsApplication9
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form4 f4 = new Form4(this.tournamentBox.Text);
+            Form_Scoreboard f4 = new Form_Scoreboard(this.tournamentBox.Text);
             f4.Show();
        
         }

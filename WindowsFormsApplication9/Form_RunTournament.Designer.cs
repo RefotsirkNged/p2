@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication9
 {
-    partial class Form3
+    partial class Form_RunTournament
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication9
 {
-    partial class Form4
+    partial class Form_Scoreboard
     {
         /// <summary>
         /// Required designer variable.

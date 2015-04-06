@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication9
 {
-    partial class Form2
+    partial class Form_AddTeams
     {
         /// <summary>
         /// Required designer variable.
