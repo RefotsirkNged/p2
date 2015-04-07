@@ -33,26 +33,25 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.tournamentBox = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.tour_StartTime = new System.Windows.Forms.Label();
-            this.est_endTime = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.match_startTime = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.match_remainTime = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.match_remainTime = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Label4 = new System.Windows.Forms.Label();
+            this.match_startTime = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.est_endTime = new System.Windows.Forms.Label();
+            this.tour_StartTime = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -100,14 +99,32 @@
             // 
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(269, 81);
+            this.panel1.Size = new System.Drawing.Size(187, 81);
             this.panel1.TabIndex = 4;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(96, 48);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 11;
+            this.button9.Text = "Scoreboard";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(15, 48);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 10;
+            this.button8.Text = "Modify";
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -116,19 +133,10 @@
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(287, 12);
+            this.panel2.Location = new System.Drawing.Point(214, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(272, 81);
             this.panel2.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Match Controls";
             // 
             // button6
             // 
@@ -157,6 +165,15 @@
             this.button4.Text = "Next Match";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Match Controls";
+            // 
             // tournamentBox
             // 
             this.tournamentBox.Location = new System.Drawing.Point(12, 99);
@@ -179,21 +196,51 @@
             this.panel3.Controls.Add(this.est_endTime);
             this.panel3.Controls.Add(this.tour_StartTime);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(565, 12);
+            this.panel3.Location = new System.Drawing.Point(501, 11);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(299, 82);
+            this.panel3.Size = new System.Drawing.Size(316, 82);
             this.panel3.TabIndex = 7;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // label3
+            // label7
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Start Time:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 63);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Next Match: ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(77, 63);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "next_matchTime";
+            // 
+            // match_remainTime
+            // 
+            this.match_remainTime.AutoSize = true;
+            this.match_remainTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.match_remainTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.match_remainTime.Location = new System.Drawing.Point(258, 33);
+            this.match_remainTime.Name = "match_remainTime";
+            this.match_remainTime.Size = new System.Drawing.Size(44, 13);
+            this.match_remainTime.TabIndex = 15;
+            this.match_remainTime.Text = "remain";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(192, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Remaining:";
             // 
             // Label4
             // 
@@ -205,17 +252,25 @@
             this.Label4.Text = "Estimated End Time:";
             this.Label4.Click += new System.EventHandler(this.Label4_Click);
             // 
-            // tour_StartTime
+            // match_startTime
             // 
-            this.tour_StartTime.AutoSize = true;
-            this.tour_StartTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tour_StartTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.tour_StartTime.Location = new System.Drawing.Point(67, 3);
-            this.tour_StartTime.Name = "tour_StartTime";
-            this.tour_StartTime.Size = new System.Drawing.Size(59, 13);
-            this.tour_StartTime.TabIndex = 10;
-            this.tour_StartTime.Text = "startTime";
-            this.tour_StartTime.Click += new System.EventHandler(this.tour_StartTime_Click);
+            this.match_startTime.AutoSize = true;
+            this.match_startTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.match_startTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.match_startTime.Location = new System.Drawing.Point(111, 33);
+            this.match_startTime.Name = "match_startTime";
+            this.match_startTime.Size = new System.Drawing.Size(100, 13);
+            this.match_startTime.TabIndex = 13;
+            this.match_startTime.Text = "match_startTime";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Current Match Start:";
             // 
             // est_endTime
             // 
@@ -229,95 +284,29 @@
             this.est_endTime.Text = "est_endTime";
             this.est_endTime.Click += new System.EventHandler(this.est_endTime_Click);
             // 
-            // label5
+            // tour_StartTime
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Current Match Start:";
+            this.tour_StartTime.AutoSize = true;
+            this.tour_StartTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tour_StartTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.tour_StartTime.Location = new System.Drawing.Point(67, 3);
+            this.tour_StartTime.Name = "tour_StartTime";
+            this.tour_StartTime.Size = new System.Drawing.Size(59, 13);
+            this.tour_StartTime.TabIndex = 10;
+            this.tour_StartTime.Text = "startTime";
+            this.tour_StartTime.Click += new System.EventHandler(this.tour_StartTime_Click);
             // 
-            // match_startTime
+            // label3
             // 
-            this.match_startTime.AutoSize = true;
-            this.match_startTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.match_startTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.match_startTime.Location = new System.Drawing.Point(111, 33);
-            this.match_startTime.Name = "match_startTime";
-            this.match_startTime.Size = new System.Drawing.Size(100, 13);
-            this.match_startTime.TabIndex = 13;
-            this.match_startTime.Text = "match_startTime";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Start Time:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(192, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Remaining:";
-            // 
-            // match_remainTime
-            // 
-            this.match_remainTime.AutoSize = true;
-            this.match_remainTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.match_remainTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.match_remainTime.Location = new System.Drawing.Point(258, 33);
-            this.match_remainTime.Name = "match_remainTime";
-            this.match_remainTime.Size = new System.Drawing.Size(44, 13);
-            this.match_remainTime.TabIndex = 15;
-            this.match_remainTime.Text = "remain";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(77, 63);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 13);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "next_matchTime";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 63);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Next Match: ";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(15, 49);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Add Team";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(96, 49);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "Modify";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(177, 49);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 11;
-            this.button9.Text = "Scoreboard";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // Form3
+            // Form_RunTournament
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -326,7 +315,7 @@
             this.Controls.Add(this.tournamentBox);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form3";
+            this.Name = "Form_RunTournament";
             this.Text = "Tournament Manager";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.panel1.ResumeLayout(false);
@@ -364,7 +353,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button9;
     }
 }

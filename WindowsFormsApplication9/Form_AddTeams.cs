@@ -31,7 +31,18 @@ namespace WindowsFormsApplication9
             //This should be stored in List instead, not as it is now. Its prolly better that way.
             string numberOfTeam = Convert.ToString(howManyTeams);
             string teamName = textBox_teamName.Text;
-            string teamSeeding = textBox_teamSeeding.Text;
+            int seed;
+                if (!int.TryParse(textBox_teamSeeding.Text, out seed) && !string.IsNullOrWhiteSpace(textBox_teamSeeding.Text))
+                {
+                    MessageBox.Show("Team Seeding has to be a number");
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(textBox_teamName.Text))
+                {
+                    MessageBox.Show("Please enter team name before attempting to add them to tournament");
+                    return;
+                }
+            string teamSeeding = Convert.ToString(seed);
             string[] Row = { numberOfTeam, teamName, teamSeeding };
             Convert.ToInt32(howManyTeams);
             howManyTeams++;
@@ -76,6 +87,11 @@ namespace WindowsFormsApplication9
             Form_TournamentNameType f1 = new Form_TournamentNameType();
             f1.Show();
             this.Hide();
+        }
+
+        private void textBox_teamSeeding_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

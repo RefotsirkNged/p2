@@ -47,6 +47,12 @@
   <ItemGroup>
     <Compile Include="DoubleElim.cs" />
     <Compile Include="Elimination.cs" />
+    <Compile Include="Form_BuildMultiTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BuildMultiTour.Designer.cs">
+      <DependentUpon>Form_BuildMultiTour.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_TournamentNameType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="Tournament.cs" />
     <Compile Include="TournamentManager.cs" />
     <Compile Include="TournamentMap.cs" />
+    <EmbeddedResource Include="Form_BuildMultiTour.resx">
+      <DependentUpon>Form_BuildMultiTour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_TournamentNameType.resx">
       <DependentUpon>Form_TournamentNameType.cs</DependentUpon>
     </EmbeddedResource>

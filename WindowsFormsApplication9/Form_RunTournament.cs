@@ -20,7 +20,17 @@ namespace WindowsFormsApplication9
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            DialogResult confirmationBox = MessageBox.Show("Are you sure you want to end the tournament, results will be posted on the scoreboard", "Confirmation on ending tournament", MessageBoxButtons.YesNo);
+            if (confirmationBox == DialogResult.Yes)
+            {
+                Form_Scoreboard f4 = new Form_Scoreboard(this.tournamentBox.Text);
+                f4.Show();
+                this.Close();
+            }
+            else if (confirmationBox == DialogResult.No)
+            {
+                return;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

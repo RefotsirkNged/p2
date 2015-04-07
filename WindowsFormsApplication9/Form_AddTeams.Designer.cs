@@ -30,8 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.applyTeamData = new System.Windows.Forms.Button();
             this.teamGridView = new System.Windows.Forms.DataGridView();
+            this.numberOfTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teamName = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.teamSeeding = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox_teamName = new System.Windows.Forms.TextBox();
             this.textBox_teamSeeding = new System.Windows.Forms.TextBox();
             this.generate_tournament = new System.Windows.Forms.Button();
@@ -42,9 +44,7 @@
             this.tournamentTypeHere = new System.Windows.Forms.Label();
             this.LabelX = new System.Windows.Forms.Label();
             this.gameHere = new System.Windows.Forms.Label();
-            this.numberOfTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teamName = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.teamSeeding = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.applyTeamData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.teamGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,16 +67,6 @@
             this.label2.Text = "Team Seeding:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // applyTeamData
-            // 
-            this.applyTeamData.Location = new System.Drawing.Point(552, 91);
-            this.applyTeamData.Name = "applyTeamData";
-            this.applyTeamData.Size = new System.Drawing.Size(75, 20);
-            this.applyTeamData.TabIndex = 1;
-            this.applyTeamData.Text = "Apply";
-            this.applyTeamData.UseVisualStyleBackColor = true;
-            this.applyTeamData.Click += new System.EventHandler(this.applyTeamData_Click);
-            // 
             // teamGridView
             // 
             this.teamGridView.AllowUserToAddRows = false;
@@ -92,6 +82,27 @@
             this.teamGridView.TabIndex = 3;
             this.teamGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // numberOfTeam
+            // 
+            this.numberOfTeam.HeaderText = "#";
+            this.numberOfTeam.Name = "numberOfTeam";
+            this.numberOfTeam.ReadOnly = true;
+            this.numberOfTeam.Width = 45;
+            // 
+            // teamName
+            // 
+            this.teamName.HeaderText = "Team name";
+            this.teamName.Name = "teamName";
+            this.teamName.ReadOnly = true;
+            this.teamName.Width = 407;
+            // 
+            // teamSeeding
+            // 
+            this.teamSeeding.HeaderText = "Team Seeding";
+            this.teamSeeding.Name = "teamSeeding";
+            this.teamSeeding.ReadOnly = true;
+            this.teamSeeding.Width = 120;
+            // 
             // textBox_teamName
             // 
             this.textBox_teamName.Location = new System.Drawing.Point(132, 91);
@@ -105,10 +116,11 @@
             this.textBox_teamSeeding.Name = "textBox_teamSeeding";
             this.textBox_teamSeeding.Size = new System.Drawing.Size(122, 20);
             this.textBox_teamSeeding.TabIndex = 5;
+            this.textBox_teamSeeding.TextChanged += new System.EventHandler(this.textBox_teamSeeding_TextChanged);
             // 
             // generate_tournament
             // 
-            this.generate_tournament.Location = new System.Drawing.Point(552, 417);
+            this.generate_tournament.Location = new System.Drawing.Point(552, 413);
             this.generate_tournament.Name = "generate_tournament";
             this.generate_tournament.Size = new System.Drawing.Size(75, 23);
             this.generate_tournament.TabIndex = 7;
@@ -118,7 +130,7 @@
             // 
             // back
             // 
-            this.back.Location = new System.Drawing.Point(458, 417);
+            this.back.Location = new System.Drawing.Point(12, 413);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(75, 23);
             this.back.TabIndex = 8;
@@ -188,28 +200,17 @@
             this.gameHere.TabIndex = 14;
             this.gameHere.Text = "gameHere";
             // 
-            // numberOfTeam
+            // applyTeamData
             // 
-            this.numberOfTeam.HeaderText = "#";
-            this.numberOfTeam.Name = "numberOfTeam";
-            this.numberOfTeam.ReadOnly = true;
-            this.numberOfTeam.Width = 45;
+            this.applyTeamData.Location = new System.Drawing.Point(552, 91);
+            this.applyTeamData.Name = "applyTeamData";
+            this.applyTeamData.Size = new System.Drawing.Size(75, 20);
+            this.applyTeamData.TabIndex = 6;
+            this.applyTeamData.Text = "Apply";
+            this.applyTeamData.UseVisualStyleBackColor = true;
+            this.applyTeamData.Click += new System.EventHandler(this.applyTeamData_Click);
             // 
-            // teamName
-            // 
-            this.teamName.HeaderText = "Team name";
-            this.teamName.Name = "teamName";
-            this.teamName.ReadOnly = true;
-            this.teamName.Width = 407;
-            // 
-            // teamSeeding
-            // 
-            this.teamSeeding.HeaderText = "Team Seeding";
-            this.teamSeeding.Name = "teamSeeding";
-            this.teamSeeding.ReadOnly = true;
-            this.teamSeeding.Width = 120;
-            // 
-            // Form2
+            // Form_AddTeams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,7 +229,7 @@
             this.Controls.Add(this.applyTeamData);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Name = "Form_AddTeams";
             this.Text = "Tournament Manager";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.teamGridView)).EndInit();
@@ -241,7 +242,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button applyTeamData;
         private System.Windows.Forms.DataGridView teamGridView;
         private System.Windows.Forms.TextBox textBox_teamName;
         private System.Windows.Forms.TextBox textBox_teamSeeding;
@@ -256,5 +256,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numberOfTeam;
         private System.Windows.Forms.DataGridViewLinkColumn teamName;
         private System.Windows.Forms.DataGridViewTextBoxColumn teamSeeding;
+        private System.Windows.Forms.Button applyTeamData;
     }
 }

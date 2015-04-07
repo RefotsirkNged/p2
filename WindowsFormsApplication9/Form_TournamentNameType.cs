@@ -40,14 +40,32 @@ namespace WindowsFormsApplication9
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form_AddTeams f2 = new Form_AddTeams(this.textBox1.Text, this.tournamentFormat.SelectedItem , this.gameSelect.SelectedItem);
-            f2.Show();
-            this.Hide(); 
+                if (!string.IsNullOrWhiteSpace(textBox1.Text) && tournamentFormat.SelectedItem != null && gameSelect.SelectedItem != null)
+                {
+                    Form_AddTeams f2 = new Form_AddTeams(this.textBox1.Text, this.tournamentFormat.SelectedItem, this.gameSelect.SelectedItem);
+                    f2.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Please make sure you have filled out all fields");
+                    return;
+                }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gameSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Maybe add custom game, possibly in this selector or in another textbox
         }
     }
 }
