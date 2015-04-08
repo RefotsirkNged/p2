@@ -24,12 +24,15 @@ namespace WindowsFormsApplication9
         {
             
         }
+        public static class publicTeamData(){
+              public static int howManyTeams = 1;
+        }
         //is this variable ok here, it seems so alone?
-        public static int howManyTeams = 1;
+      
         private void applyTeamData_Click(object sender, EventArgs e)
         {
             //This should be stored in List instead, not as it is now. Its prolly better that way.
-            string numberOfTeam = Convert.ToString(howManyTeams);
+            string numberOfTeam = Convert.ToString(publicTeamData.howManyTeams);
             string teamName = textBox_teamName.Text;
             int seed;
                 if (!int.TryParse(textBox_teamSeeding.Text, out seed) && !string.IsNullOrWhiteSpace(textBox_teamSeeding.Text))
@@ -44,8 +47,8 @@ namespace WindowsFormsApplication9
                 }
             string teamSeeding = Convert.ToString(seed);
             string[] Row = { numberOfTeam, teamName, teamSeeding };
-            Convert.ToInt32(howManyTeams);
-            howManyTeams++;
+            Convert.ToInt32(publicTeamData.howManyTeams);
+            publicTeamData.howManyTeams++;
             teamGridView.Rows.Add(Row);
             textBox_teamName.Clear();
             textBox_teamSeeding.Clear();
