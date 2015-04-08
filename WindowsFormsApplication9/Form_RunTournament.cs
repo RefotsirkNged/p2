@@ -75,7 +75,7 @@ namespace WindowsFormsApplication9
 
         }
 
-        private void tournamentBox_Enter(object sender, EventArgs e)
+        public void tournamentBox_Enter(object sender, EventArgs e)
         {
           
         }
@@ -92,5 +92,22 @@ namespace WindowsFormsApplication9
 
         }
 
+        public void teamGroupBox()
+        {
+          
+            GroupBox teamBox = new GroupBox();
+            teamBox.Name = "teamBox_" + TournamentManager.teamName;
+            teamBox.Text = TournamentManager.teamName;
+            teamBox.Width = 100;
+            teamBox.Height = 50;
+            teamBox.Left += 100;
+            teamBox.Top += 100;
+
+        }
+
+        private void startTournament_Click(object sender, EventArgs e)
+        {
+            teamGroupBox();
+        }
     }
 }

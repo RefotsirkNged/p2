@@ -11,6 +11,7 @@ namespace WindowsFormsApplication9
         public static string tournamentName;
         public static string gameType;
         public static string tournamentType;
+        public static string teamName;
         
 	}
 }

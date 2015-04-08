@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.startTournament = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,14 +58,15 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // startTournament
             // 
-            this.button1.Location = new System.Drawing.Point(15, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
+            this.startTournament.Location = new System.Drawing.Point(15, 19);
+            this.startTournament.Name = "startTournament";
+            this.startTournament.Size = new System.Drawing.Size(75, 23);
+            this.startTournament.TabIndex = 0;
+            this.startTournament.Text = "Start";
+            this.startTournament.UseVisualStyleBackColor = true;
+            this.startTournament.Click += new System.EventHandler(this.startTournament_Click);
             // 
             // button2
             // 
@@ -102,7 +103,7 @@
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.startTournament);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(187, 81);
@@ -143,7 +144,7 @@
             // TournamentCount
             // 
             this.TournamentCount.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.TournamentCount.Location = new System.Drawing.Point(97, 49);
+            this.TournamentCount.Location = new System.Drawing.Point(97, 52);
             this.TournamentCount.Name = "TournamentCount";
             this.TournamentCount.Size = new System.Drawing.Size(156, 20);
             this.TournamentCount.TabIndex = 8;
@@ -300,7 +301,7 @@
             this.tour_StartTime.AutoSize = true;
             this.tour_StartTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tour_StartTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.tour_StartTime.Location = new System.Drawing.Point(67, 3);
+            this.tour_StartTime.Location = new System.Drawing.Point(58, 3);
             this.tour_StartTime.Name = "tour_StartTime";
             this.tour_StartTime.Size = new System.Drawing.Size(59, 13);
             this.tour_StartTime.TabIndex = 10;
@@ -341,7 +342,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button startTournament;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
@@ -351,7 +352,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox tournamentBox;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label match_remainTime;
         private System.Windows.Forms.Label label6;
@@ -366,5 +366,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox TournamentCount;
+        public System.Windows.Forms.GroupBox tournamentBox;
     }
 }

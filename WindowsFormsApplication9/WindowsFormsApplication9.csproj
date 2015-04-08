@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoubleElim.cs" />
+    <Compile Include="DrawMatchMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Elimination.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="Form_BuildMultiTour.cs">
