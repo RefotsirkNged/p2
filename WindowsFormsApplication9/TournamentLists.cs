@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace P2.Turnering
+namespace WindowsFormsApplication9
 {
-	public class Lists
+	public class TournamentLists
 	{
 		String MatchList;
 		String TeamList;

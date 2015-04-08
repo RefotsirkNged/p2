@@ -82,7 +82,7 @@
     <Compile Include="GameModel.cs" />
     <Compile Include="GeneralElim.cs" />
     <Compile Include="GUI.cs" />
-    <Compile Include="Lists.cs" />
+    <Compile Include="TournamentLists.cs" />
     <Compile Include="MatchModel.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Program.cs" />
@@ -92,7 +92,7 @@
     <Compile Include="Splash.cs" />
     <Compile Include="TeamModel.cs" />
     <Compile Include="TimeKeeper.cs" />
-    <Compile Include="Tournament.cs" />
+    <Compile Include="TournamentModel.cs" />
     <Compile Include="TournamentManager.cs" />
     <Compile Include="TournamentMap.cs" />
     <EmbeddedResource Include="Form_BuildMultiTour.resx">
