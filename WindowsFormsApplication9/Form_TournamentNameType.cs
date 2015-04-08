@@ -18,8 +18,8 @@ namespace WindowsFormsApplication9
             try
             {
                 textBox1.Text = TournamentManager.tournamentName;
-                est_tourTime.Value = DateTime.Parse(TournamentManager.est_startTime);
-                est_startDateTime.Value = DateTime.Parse(TournamentManager.est_startDate);
+                est_tourTime.Value = TournamentManager.est_startTime;
+                est_startDate.Value = TournamentManager.est_startDate;
                 gameSelect.SelectedItem = TournamentManager.gameType;
                 tournamentFormat.SelectedItem = TournamentManager.tournamentType;
             }
@@ -27,13 +27,21 @@ namespace WindowsFormsApplication9
             {
                 textBox1.Text = "";
                 est_tourTime.Value = DateTime.Today;
-                est_startDateTime.Value = DateTime.Today;
+                est_startDate.Value = DateTime.Today;
                 gameSelect.SelectedItem = "";
                 tournamentFormat.SelectedItem = "";
             }
             catch(FormatException)
             {
-                
+                MessageBox.Show("An error occured, you will have to reenter the required fields");
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                textBox1.Text = "";
+                est_tourTime.Value = DateTime.Today;
+                est_startDate.Value = DateTime.Today;
+                gameSelect.SelectedItem = "";
+                tournamentFormat.SelectedItem = "";
             }
 
         }
@@ -75,7 +83,7 @@ namespace WindowsFormsApplication9
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            TournamentManager.est_startDate = Convert.ToString(this.est_startDateTime);
+            TournamentManager.est_startDate = est_startDate.Value;
         }
 
         private void gameSelect_SelectedIndexChanged(object sender, EventArgs e)
@@ -96,7 +104,7 @@ namespace WindowsFormsApplication9
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
-            TournamentManager.est_startTime = est_tourTime.Text;
+            TournamentManager.est_startTime = est_tourTime.Value;
         }
     }
 }

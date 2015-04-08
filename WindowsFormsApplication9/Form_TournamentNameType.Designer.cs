@@ -38,7 +38,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.gameSelect = new System.Windows.Forms.ComboBox();
             this.tournamentFormat = new System.Windows.Forms.ComboBox();
-            this.est_startDateTime = new System.Windows.Forms.DateTimePicker();
+            this.est_startDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.est_tourTime = new System.Windows.Forms.DateTimePicker();
@@ -146,14 +146,14 @@
             this.tournamentFormat.TabIndex = 13;
             this.tournamentFormat.SelectedIndexChanged += new System.EventHandler(this.tournamentFormat_SelectedIndexChanged);
             // 
-            // est_startDateTime
+            // est_startDate
             // 
-            this.est_startDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.est_startDateTime.Location = new System.Drawing.Point(20, 85);
-            this.est_startDateTime.Name = "est_startDateTime";
-            this.est_startDateTime.Size = new System.Drawing.Size(125, 20);
-            this.est_startDateTime.TabIndex = 14;
-            this.est_startDateTime.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.est_startDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.est_startDate.Location = new System.Drawing.Point(20, 85);
+            this.est_startDate.Name = "est_startDate";
+            this.est_startDate.Size = new System.Drawing.Size(125, 20);
+            this.est_startDate.TabIndex = 14;
+            this.est_startDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label4
             // 
@@ -193,7 +193,7 @@
             this.Controls.Add(this.est_tourTime);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.est_startDateTime);
+            this.Controls.Add(this.est_startDate);
             this.Controls.Add(this.tournamentFormat);
             this.Controls.Add(this.gameSelect);
             this.Controls.Add(this.button2);
@@ -223,7 +223,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox gameSelect;
         private System.Windows.Forms.ComboBox tournamentFormat;
-        private System.Windows.Forms.DateTimePicker est_startDateTime;
+        private System.Windows.Forms.DateTimePicker est_startDate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker est_tourTime;

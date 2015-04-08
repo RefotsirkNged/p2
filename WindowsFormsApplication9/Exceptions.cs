@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApplication9
+namespace HereBeExceptions
 {
     public class Exceptions : Exception
     {

@@ -16,7 +16,7 @@ namespace WindowsFormsApplication9
         {
             InitializeComponent();
             tournamentBox.Text = TournamentManager.tournamentName;
-            tour_StartTime.Text = TournamentManager.est_startTime;
+            tour_StartTime.Text = Convert.ToString(TournamentManager.est_startTime);
          
         }
 
