@@ -159,6 +159,7 @@
             this.tournamentNameHere.Size = new System.Drawing.Size(129, 13);
             this.tournamentNameHere.TabIndex = 10;
             this.tournamentNameHere.Text = "tournamentNameHere";
+            this.tournamentNameHere.Click += new System.EventHandler(this.tournamentNameHere_Click);
             // 
             // label4
             // 
@@ -200,6 +201,7 @@
             this.gameHere.Size = new System.Drawing.Size(64, 13);
             this.gameHere.TabIndex = 14;
             this.gameHere.Text = "gameHere";
+            this.gameHere.Click += new System.EventHandler(this.gameHere_Click);
             // 
             // applyTeamData
             // 

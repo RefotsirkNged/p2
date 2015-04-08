@@ -49,3 +49,14 @@ C:\Users\Bokaj\Documents\GitHub\P2\p2\WindowsFormsApplication9\obj\Debug\Windows
 C:\Users\Bokaj\Documents\GitHub\P2\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.csproj.GenerateResource.Cache
 C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\bin\Debug\WindowsFormsApplication9.exe.config
 C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.exe
+C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.csprojResolveAssemblyReference.cache
+C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.Form_BuildMultiTour.resources
+C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.Form_TournamentNameType.resources
+C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.Form_AddTeams.resources
+C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.Form_RunTournament.resources
+C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.Form_Scoreboard.resources
+C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.Properties.Resources.resources
+C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.csproj.GenerateResource.Cache
+C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\bin\Debug\WindowsFormsApplication9.exe
+C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\bin\Debug\WindowsFormsApplication9.pdb
+C:\Users\Peter Volstrup\Documents\GitHub\p2\WindowsFormsApplication9\obj\Debug\WindowsFormsApplication9.pdb

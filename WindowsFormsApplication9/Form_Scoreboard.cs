@@ -12,10 +12,10 @@ namespace WindowsFormsApplication9
 {
     public partial class Form_Scoreboard : Form
     {
-        public Form_Scoreboard(string tourName)
+        public Form_Scoreboard()
         {
             InitializeComponent();
-            tour_ScoreBoard.Text = tourName;
+            tour_ScoreBoard.Text = TournamentManager.tournamentName;
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -12,29 +12,33 @@ namespace WindowsFormsApplication9
 {
     public partial class Form_AddTeams : Form
     {
-        public Form_AddTeams(string tourNameLabel, object tourTypeLabel, object gameType)
+        public Form_AddTeams()
         {
             InitializeComponent();
-            tournamentNameHere.Text = tourNameLabel;
-            tournamentTypeHere.Text = Convert.ToString(tourTypeLabel);
-            gameHere.Text = Convert.ToString(gameType);
+         //   tournamentNameHere.Text = tourNameLabel;
+        //    tournamentTypeHere.Text = Convert.ToString(tourTypeLabel);
+        //    gameHere.Text = Convert.ToString(gameType);
+            tournamentNameHere.Text = TournamentManager.tournamentName;
+            tournamentTypeHere.Text = TournamentManager.tournamentType;
+            gameHere.Text = TournamentManager.gameType;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
         }
-        public static class publicTeamData(){
-              public static int howManyTeams = 1;
-        }
+         int howManyTeams = 1;
+        
         //is this variable ok here, it seems so alone?
       
         private void applyTeamData_Click(object sender, EventArgs e)
         {
-            //This should be stored in List instead, not as it is now. Its prolly better that way.
-            string numberOfTeam = Convert.ToString(publicTeamData.howManyTeams);
-            string teamName = textBox_teamName.Text;
-            int seed;
+            try
+            {
+                //This should be stored in List instead, not as it is now. Its prolly better that way.
+                string numberOfTeam = Convert.ToString(howManyTeams);
+                string teamName = textBox_teamName.Text;
+                int seed;
                 if (!int.TryParse(textBox_teamSeeding.Text, out seed) && !string.IsNullOrWhiteSpace(textBox_teamSeeding.Text))
                 {
                     MessageBox.Show("Team Seeding has to be a number");
@@ -45,13 +49,26 @@ namespace WindowsFormsApplication9
                     MessageBox.Show("Please enter team name before attempting to add them to tournament");
                     return;
                 }
-            string teamSeeding = Convert.ToString(seed);
-            string[] Row = { numberOfTeam, teamName, teamSeeding };
-            Convert.ToInt32(publicTeamData.howManyTeams);
-            publicTeamData.howManyTeams++;
-            teamGridView.Rows.Add(Row);
-            textBox_teamName.Clear();
-            textBox_teamSeeding.Clear();
+                string teamSeeding = Convert.ToString(seed);
+                string[] Row = { numberOfTeam, teamName, teamSeeding };
+                Convert.ToInt32(howManyTeams);
+                howManyTeams++;
+                teamGridView.Rows.Add(Row);
+                textBox_teamName.Clear();
+                textBox_teamSeeding.Clear();
+            }
+            catch (IndexOutOfRangeException)
+            {
+
+                MessageBox.Show("Input is out of range, please try again");
+                return;
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("The format of the input is not valid, please correct it");
+                return;
+            }
+           
             
         }
 
@@ -79,7 +96,7 @@ namespace WindowsFormsApplication9
 
         private void generate_tournament_Click(object sender, EventArgs e)
         {
-            Form_RunTournament f3 = new Form_RunTournament(this.tournamentNameHere.Text);
+            Form_RunTournament f3 = new Form_RunTournament();
             f3.Show();
             this.Hide(); 
         }
@@ -98,6 +115,16 @@ namespace WindowsFormsApplication9
         }
 
         private void textBox_teamName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tournamentNameHere_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gameHere_Click(object sender, EventArgs e)
         {
 
         }

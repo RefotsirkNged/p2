@@ -12,10 +12,12 @@ namespace WindowsFormsApplication9
 {
     public partial class Form_RunTournament : Form
     {
-        public Form_RunTournament(string tourName)
+        public Form_RunTournament()
         {
             InitializeComponent();
-            tournamentBox.Text = tourName;
+            tournamentBox.Text = TournamentManager.tournamentName;
+            tour_StartTime.Text = TournamentManager.est_startTime;
+         
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -23,7 +25,7 @@ namespace WindowsFormsApplication9
             DialogResult confirmationBox = MessageBox.Show("Are you sure you want to end the tournament, results will be posted on the scoreboard", "Confirmation on ending tournament", MessageBoxButtons.YesNo);
             if (confirmationBox == DialogResult.Yes)
             {
-                Form_Scoreboard f4 = new Form_Scoreboard(this.tournamentBox.Text);
+                Form_Scoreboard f4 = new Form_Scoreboard();
                 f4.Show();
                 this.Close();
             }
@@ -80,7 +82,7 @@ namespace WindowsFormsApplication9
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form_Scoreboard f4 = new Form_Scoreboard(this.tournamentBox.Text);
+            Form_Scoreboard f4 = new Form_Scoreboard();
             f4.Show();
        
         }

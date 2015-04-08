@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WindowsFormsApplication9.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,6 +50,7 @@
   <ItemGroup>
     <Compile Include="DoubleElim.cs" />
     <Compile Include="Elimination.cs" />
+    <Compile Include="Exceptions.cs" />
     <Compile Include="Form_BuildMultiTour.cs">
       <SubType>Form</SubType>
     </Compile>

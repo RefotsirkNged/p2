@@ -41,6 +41,7 @@
             this.est_startDateTime = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.est_tourTime = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -77,6 +78,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(352, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label5
             // 
@@ -142,12 +144,14 @@
             this.tournamentFormat.Name = "tournamentFormat";
             this.tournamentFormat.Size = new System.Drawing.Size(195, 21);
             this.tournamentFormat.TabIndex = 13;
+            this.tournamentFormat.SelectedIndexChanged += new System.EventHandler(this.tournamentFormat_SelectedIndexChanged);
             // 
             // est_startDateTime
             // 
+            this.est_startDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.est_startDateTime.Location = new System.Drawing.Point(20, 85);
             this.est_startDateTime.Name = "est_startDateTime";
-            this.est_startDateTime.Size = new System.Drawing.Size(195, 20);
+            this.est_startDateTime.Size = new System.Drawing.Size(125, 20);
             this.est_startDateTime.TabIndex = 14;
             this.est_startDateTime.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -169,11 +173,24 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Select tournament start date and estimated time: ";
             // 
+            // est_tourTime
+            // 
+            this.est_tourTime.CustomFormat = "HH:mm";
+            this.est_tourTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.est_tourTime.Location = new System.Drawing.Point(152, 84);
+            this.est_tourTime.Name = "est_tourTime";
+            this.est_tourTime.ShowUpDown = true;
+            this.est_tourTime.Size = new System.Drawing.Size(63, 20);
+            this.est_tourTime.TabIndex = 17;
+            this.est_tourTime.Value = new System.DateTime(2015, 4, 8, 14, 35, 0, 0);
+            this.est_tourTime.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
+            // 
             // Form_TournamentNameType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 266);
+            this.Controls.Add(this.est_tourTime);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.est_startDateTime);
@@ -209,6 +226,7 @@
         private System.Windows.Forms.DateTimePicker est_startDateTime;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker est_tourTime;
 
     }
 }
