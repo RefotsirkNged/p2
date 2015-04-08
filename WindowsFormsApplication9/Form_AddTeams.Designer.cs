@@ -109,6 +109,7 @@
             this.textBox_teamName.Name = "textBox_teamName";
             this.textBox_teamName.Size = new System.Drawing.Size(174, 20);
             this.textBox_teamName.TabIndex = 4;
+            this.textBox_teamName.TextChanged += new System.EventHandler(this.textBox_teamName_TextChanged);
             // 
             // textBox_teamSeeding
             // 

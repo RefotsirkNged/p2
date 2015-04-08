@@ -25,7 +25,7 @@ namespace WindowsFormsApplication9
             
         }
         //is this variable ok here, it seems so alone?
-        int howManyTeams = 1;
+        public static int howManyTeams = 1;
         private void applyTeamData_Click(object sender, EventArgs e)
         {
             //This should be stored in List instead, not as it is now. Its prolly better that way.
@@ -90,6 +90,11 @@ namespace WindowsFormsApplication9
         }
 
         private void textBox_teamSeeding_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_teamName_TextChanged(object sender, EventArgs e)
         {
 
         }

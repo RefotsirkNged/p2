@@ -85,5 +85,10 @@ namespace WindowsFormsApplication9
        
         }
 
+        public void TournamentCount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

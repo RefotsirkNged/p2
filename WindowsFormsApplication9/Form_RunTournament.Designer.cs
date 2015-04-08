@@ -36,6 +36,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TournamentCount = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -128,6 +129,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.TournamentCount);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button3);
@@ -137,6 +139,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(272, 81);
             this.panel2.TabIndex = 5;
+            // 
+            // TournamentCount
+            // 
+            this.TournamentCount.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.TournamentCount.Location = new System.Drawing.Point(97, 49);
+            this.TournamentCount.Name = "TournamentCount";
+            this.TournamentCount.Size = new System.Drawing.Size(156, 20);
+            this.TournamentCount.TabIndex = 8;
+            this.TournamentCount.TextChanged += new System.EventHandler(this.TournamentCount_TextChanged);
             // 
             // button6
             // 
@@ -354,5 +365,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox TournamentCount;
     }
 }

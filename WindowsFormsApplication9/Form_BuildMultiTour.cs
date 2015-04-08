@@ -31,5 +31,23 @@ namespace WindowsFormsApplication9
         {
 
         }
+
+        public void button2_Click(object sender, EventArgs e)
+        {
+            int numberOfTeam = howManyTeams;
+            int n = 0;
+
+            while (Math.Pow(2, n) < numberOfTeam)
+            {
+                ++n;
+            }
+
+            TournamentCount.Text = Convert.ToString(Math.Pow(2, n));
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
