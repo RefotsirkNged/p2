@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.teamGridView = new System.Windows.Forms.DataGridView();
-            this.numberOfTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teamName = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.teamSeeding = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox_teamName = new System.Windows.Forms.TextBox();
-            this.textBox_teamSeeding = new System.Windows.Forms.TextBox();
             this.generate_tournament = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +40,8 @@
             this.LabelX = new System.Windows.Forms.Label();
             this.gameHere = new System.Windows.Forms.Label();
             this.applyTeamData = new System.Windows.Forms.Button();
+            this.numberOfTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teamName = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.teamGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,51 +54,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Please enter team name: ";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(312, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Team Seeding:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // teamGridView
             // 
             this.teamGridView.AllowUserToAddRows = false;
             this.teamGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.teamGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numberOfTeam,
-            this.teamName,
-            this.teamSeeding});
+            this.teamName});
             this.teamGridView.Location = new System.Drawing.Point(12, 130);
             this.teamGridView.Name = "teamGridView";
             this.teamGridView.ReadOnly = true;
             this.teamGridView.Size = new System.Drawing.Size(615, 267);
             this.teamGridView.TabIndex = 3;
             this.teamGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // numberOfTeam
-            // 
-            this.numberOfTeam.HeaderText = "#";
-            this.numberOfTeam.Name = "numberOfTeam";
-            this.numberOfTeam.ReadOnly = true;
-            this.numberOfTeam.Width = 45;
-            // 
-            // teamName
-            // 
-            this.teamName.HeaderText = "Team name";
-            this.teamName.Name = "teamName";
-            this.teamName.ReadOnly = true;
-            this.teamName.Width = 407;
-            // 
-            // teamSeeding
-            // 
-            this.teamSeeding.HeaderText = "Team Seeding";
-            this.teamSeeding.Name = "teamSeeding";
-            this.teamSeeding.ReadOnly = true;
-            this.teamSeeding.Width = 120;
             // 
             // textBox_teamName
             // 
@@ -110,14 +75,6 @@
             this.textBox_teamName.Size = new System.Drawing.Size(174, 20);
             this.textBox_teamName.TabIndex = 4;
             this.textBox_teamName.TextChanged += new System.EventHandler(this.textBox_teamName_TextChanged);
-            // 
-            // textBox_teamSeeding
-            // 
-            this.textBox_teamSeeding.Location = new System.Drawing.Point(400, 91);
-            this.textBox_teamSeeding.Name = "textBox_teamSeeding";
-            this.textBox_teamSeeding.Size = new System.Drawing.Size(122, 20);
-            this.textBox_teamSeeding.TabIndex = 5;
-            this.textBox_teamSeeding.TextChanged += new System.EventHandler(this.textBox_teamSeeding_TextChanged);
             // 
             // generate_tournament
             // 
@@ -213,6 +170,20 @@
             this.applyTeamData.UseVisualStyleBackColor = true;
             this.applyTeamData.Click += new System.EventHandler(this.applyTeamData_Click);
             // 
+            // numberOfTeam
+            // 
+            this.numberOfTeam.HeaderText = "#";
+            this.numberOfTeam.Name = "numberOfTeam";
+            this.numberOfTeam.ReadOnly = true;
+            this.numberOfTeam.Width = 42;
+            // 
+            // teamName
+            // 
+            this.teamName.HeaderText = "Team name";
+            this.teamName.Name = "teamName";
+            this.teamName.ReadOnly = true;
+            this.teamName.Width = 530;
+            // 
             // Form_AddTeams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,11 +197,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.back);
             this.Controls.Add(this.generate_tournament);
-            this.Controls.Add(this.textBox_teamSeeding);
             this.Controls.Add(this.textBox_teamName);
             this.Controls.Add(this.teamGridView);
             this.Controls.Add(this.applyTeamData);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form_AddTeams";
             this.Text = "Tournament Manager";
@@ -244,10 +213,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView teamGridView;
         private System.Windows.Forms.TextBox textBox_teamName;
-        private System.Windows.Forms.TextBox textBox_teamSeeding;
         private System.Windows.Forms.Button generate_tournament;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Label label3;
@@ -256,9 +223,8 @@
         private System.Windows.Forms.Label tournamentTypeHere;
         private System.Windows.Forms.Label LabelX;
         private System.Windows.Forms.Label gameHere;
+        private System.Windows.Forms.Button applyTeamData;
         private System.Windows.Forms.DataGridViewTextBoxColumn numberOfTeam;
         private System.Windows.Forms.DataGridViewLinkColumn teamName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teamSeeding;
-        private System.Windows.Forms.Button applyTeamData;
     }
 }
