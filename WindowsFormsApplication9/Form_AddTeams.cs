@@ -13,13 +13,13 @@ namespace WindowsFormsApplication9
 {
     public partial class Form_AddTeams : Form
     {
-        TournamentModel model = new TournamentModel();
+  
         public Form_AddTeams()
         {
             InitializeComponent();
-            tournamentNameHere.Text = model.Name;
-            tournamentTypeHere.Text = Convert.ToString(model.TournamentType);
-            gameHere.Text = model.Game;
+            tournamentNameHere.Text = TournamentModel.Name;
+            tournamentTypeHere.Text = Convert.ToString(TournamentModel.TournamentType);
+            gameHere.Text = TournamentModel.Game;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -46,6 +46,7 @@ namespace WindowsFormsApplication9
                 string[] Row = { numberOfTeam, teamName };
                 Convert.ToInt32(howManyTeams);
                 howManyTeams++;
+                TournamentModel.TeamAmount = howManyTeams;
                 teamGridView.Rows.Add(Row);
                 textBox_teamName.Clear();
                

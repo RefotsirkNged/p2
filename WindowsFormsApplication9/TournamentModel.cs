@@ -8,14 +8,14 @@ namespace WindowsFormsApplication9
 {
     public class TournamentModel
     {
-        private string _name;
-        private int _teamAmount;
-        private string _game;
+        private static string _name;
+        private static int _teamAmount;
+        private static string _game;
         private bool _activeTournament;
-        private string _tournamentType;
+        private static string _tournamentType;
         private TournamentLists _lists;
-        private DateTime _est_starttime;
-        private DateTime _est_startdate;
+        private static DateTime _est_starttime;
+        private static DateTime _est_startdate;
 
         public static TournamentModel instance = null;
 
@@ -31,30 +31,30 @@ namespace WindowsFormsApplication9
             }
         }
 
-        public DateTime est_StartTime
+        public static DateTime est_StartTime
         {
             get { return _est_starttime; }
             set { _est_starttime = value; }
         }
-        public DateTime est_StartDate
+        public static DateTime est_StartDate
         {
             get { return _est_startdate; }
             set { _est_startdate = value; }
         }
 
-        public string Name
+        public static string Name
         {
             get { return _name; }
             set { _name = value; }
         }
 
-        public int TeamAmount
+        public static int TeamAmount
         {
             get { return _teamAmount; }
             set { _teamAmount = value; }
         }
 
-        public string Game
+        public static string Game
         {
             get { return _game; }
             set { _game = value; }
@@ -66,7 +66,7 @@ namespace WindowsFormsApplication9
             set { _activeTournament = value; }
         }
 
-        public string TournamentType
+        public static string TournamentType
         {
             get { return _tournamentType; }
             set { _tournamentType = value; }

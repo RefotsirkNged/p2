@@ -16,9 +16,9 @@ namespace WindowsFormsApplication9
         public Form_RunTournament()
         {
             InitializeComponent();
-            tournamentBox.Text = model.Name;
+            tournamentBox.Text = TournamentModel.Name;
             //konverterer til string fordi textbox ik kan lide DateTime format
-            tour_StartTime.Text = Convert.ToString(model.est_StartTime);
+            tour_StartTime.Text = Convert.ToString(TournamentModel.est_StartTime);
          
         }
 
