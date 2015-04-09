@@ -12,11 +12,13 @@ namespace WindowsFormsApplication9
 {
     public partial class Form_RunTournament : Form
     {
+        TournamentModel model = new TournamentModel();
         public Form_RunTournament()
         {
             InitializeComponent();
-            tournamentBox.Text = TournamentManager.tournamentName;
-            tour_StartTime.Text = Convert.ToString(TournamentManager.est_startTime);
+            tournamentBox.Text = model.Name;
+            //konverterer til string fordi textbox ik kan lide DateTime format
+            tour_StartTime.Text = Convert.ToString(model.est_StartTime);
          
         }
 

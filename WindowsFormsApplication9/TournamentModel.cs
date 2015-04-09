@@ -6,14 +6,27 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication9
 {
-    class TournamentModel
+    public class TournamentModel
     {
         private string _name;
         private int _teamAmount;
-        private GameModel _game;
+        private string _game;
         private bool _activeTournament;
-        private TournamentTypes _tournamentType;
+        private string _tournamentType;
         private TournamentLists _lists;
+        private DateTime _est_starttime;
+        private DateTime _est_startdate;
+
+        public DateTime est_StartTime
+        {
+            get { return _est_starttime; }
+            set { _est_starttime = value; }
+        }
+        public DateTime est_StartDate
+        {
+            get { return _est_startdate; }
+            set { _est_startdate = value; }
+        }
 
         public string Name
         {
@@ -27,7 +40,7 @@ namespace WindowsFormsApplication9
             set { _teamAmount = value; }
         }
 
-        public GameModel Game
+        public string Game
         {
             get { return _game; }
             set { _game = value; }
@@ -39,14 +52,7 @@ namespace WindowsFormsApplication9
             set { _activeTournament = value; }
         }
 
-        public enum TournamentTypes
-        {
-            RoundRobin,
-            SingleElimination,
-            DoubleElimination
-        }
-
-        public TournamentTypes TournamentType
+        public string TournamentType
         {
             get { return _tournamentType; }
             set { _tournamentType = value; }
