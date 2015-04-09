@@ -17,6 +17,20 @@ namespace WindowsFormsApplication9
         private DateTime _est_starttime;
         private DateTime _est_startdate;
 
+        public static TournamentModel instance = null;
+
+        public static TournamentModel Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new TournamentModel();
+                }
+                return instance;
+            }
+        }
+
         public DateTime est_StartTime
         {
             get { return _est_starttime; }
