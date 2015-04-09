@@ -51,28 +51,5 @@ namespace WindowsFormsApplication9
              get { return _round; }
              set { _round = value; }
          }
-
-  
-
-
-		public void RunMatch()
-		{
-			throw new NotImplementedException();
-		}
-
-		public void ReMatch()
-		{
-			throw new NotImplementedException();
-		}
-
-		public void SkipMatch()
-		{
-			throw new NotImplementedException();
-		}
-
-		public void CalcResult()
-		{
-			throw new NotImplementedException();
-		}
 	}
 }
