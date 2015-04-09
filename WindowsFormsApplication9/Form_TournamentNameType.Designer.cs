@@ -176,13 +176,13 @@
             // est_tourTime
             // 
             this.est_tourTime.CustomFormat = "HH:mm";
-            this.est_tourTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.est_tourTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.est_tourTime.Location = new System.Drawing.Point(152, 84);
             this.est_tourTime.Name = "est_tourTime";
             this.est_tourTime.ShowUpDown = true;
             this.est_tourTime.Size = new System.Drawing.Size(63, 20);
             this.est_tourTime.TabIndex = 17;
-            this.est_tourTime.Value = new System.DateTime(2015, 4, 9, 14, 35, 0, 0);
+            this.est_tourTime.Value = new System.DateTime(2015, 4, 8, 14, 35, 0, 0);
             this.est_tourTime.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
             // 
             // Form_TournamentNameType

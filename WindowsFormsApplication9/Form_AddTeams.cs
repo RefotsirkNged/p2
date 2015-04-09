@@ -7,19 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using HereBeExceptions;
 
 namespace WindowsFormsApplication9
 {
     public partial class Form_AddTeams : Form
     {
-        TournamentModel model = new TournamentModel();
         public Form_AddTeams()
         {
             InitializeComponent();
-            tournamentNameHere.Text = model.Name;
-            tournamentTypeHere.Text = Convert.ToString(model.TournamentType);
-            gameHere.Text = model.Game;
+         //   tournamentNameHere.Text = tourNameLabel;
+        //    tournamentTypeHere.Text = Convert.ToString(tourTypeLabel);
+        //    gameHere.Text = Convert.ToString(gameType);
+            tournamentNameHere.Text = TournamentManager.tournamentName;
+            tournamentTypeHere.Text = TournamentManager.tournamentType;
+            gameHere.Text = TournamentManager.gameType;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -37,18 +39,24 @@ namespace WindowsFormsApplication9
                 //This should be stored in List instead, not as it is now. Its prolly better that way.
                 string numberOfTeam = Convert.ToString(howManyTeams);
                 string teamName = textBox_teamName.Text;
+                int seed;
+                if (!int.TryParse(textBox_teamSeeding.Text, out seed) && !string.IsNullOrWhiteSpace(textBox_teamSeeding.Text))
+                {
+                    MessageBox.Show("Team Seeding has to be a number");
+                    return;
+                }
                 if (string.IsNullOrWhiteSpace(textBox_teamName.Text))
                 {
                     MessageBox.Show("Please enter team name before attempting to add them to tournament");
                     return;
                 }
-               
-                string[] Row = { numberOfTeam, teamName };
+                string teamSeeding = Convert.ToString(seed);
+                string[] Row = { numberOfTeam, teamName, teamSeeding };
                 Convert.ToInt32(howManyTeams);
                 howManyTeams++;
                 teamGridView.Rows.Add(Row);
                 textBox_teamName.Clear();
-               
+                textBox_teamSeeding.Clear();
             }
             catch (IndexOutOfRangeException)
             {

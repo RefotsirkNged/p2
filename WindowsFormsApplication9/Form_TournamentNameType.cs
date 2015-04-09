@@ -7,28 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
- 
 
 namespace WindowsFormsApplication9
 {
     public partial class Form_TournamentNameType : Form
     {
-        TournamentModel model = new TournamentModel();
         public Form_TournamentNameType()
         {
-         
             InitializeComponent();
             try
             {
-                textBox1.Text = model.Name;
-                est_tourTime.Value = model.est_StartTime;
-                est_startDate.Value = model.est_StartDate;
+                textBox1.Text = TournamentManager.tournamentName;
+                est_tourTime.Value = TournamentManager.est_startTime;
+                est_startDate.Value = TournamentManager.est_startDate;
                 gameSelect.SelectedItem = TournamentManager.gameType;
                 tournamentFormat.SelectedItem = TournamentManager.tournamentType;
             }
             catch (ArgumentNullException)
             {
-                textBox1.Text = model.Name;
+                textBox1.Text = "";
                 est_tourTime.Value = DateTime.Today;
                 est_startDate.Value = DateTime.Today;
                 gameSelect.SelectedItem = "";
@@ -86,30 +83,28 @@ namespace WindowsFormsApplication9
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-        
-           model.est_StartTime = est_startDate.Value;
+            TournamentManager.est_startDate = est_startDate.Value;
         }
 
         private void gameSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Maybe add custom game, possibly in this selector or in another textbox
-          
-            model.Game = Convert.ToString(gameSelect.SelectedItem);
+            TournamentManager.gameType = Convert.ToString(gameSelect.SelectedItem);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            model.Name = textBox1.Text;
+            TournamentManager.tournamentName = textBox1.Text;
         }
 
         private void tournamentFormat_SelectedIndexChanged(object sender, EventArgs e)
         {
-           model.TournamentType = Convert.ToString(tournamentFormat.SelectedItem);
+            TournamentManager.tournamentType = Convert.ToString(tournamentFormat.SelectedItem);
         }
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
-            model.est_StartTime = est_tourTime.Value;
+            TournamentManager.est_startTime = est_tourTime.Value;
         }
     }
 }
