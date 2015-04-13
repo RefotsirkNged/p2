@@ -4,6 +4,7 @@ using System.Text;
 
 namespace WindowsFormsApplication9
 {
+    //remainingtemalist needed?
     public class TournamentLists
     {
         private List<List<TeamModel>> _groupList = new List<List<TeamModel>>();
