@@ -84,7 +84,6 @@
     <Compile Include="Forms.cs" />
     <Compile Include="GameModel.cs" />
     <Compile Include="GeneralElim.cs" />
-    <Compile Include="GUI.cs" />
     <Compile Include="TournamentLists.cs" />
     <Compile Include="MatchModel.cs" />
     <Compile Include="Menu.cs" />
